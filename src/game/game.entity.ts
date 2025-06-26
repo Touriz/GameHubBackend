@@ -46,4 +46,31 @@ export class Game {
 
   @Column({ default: false })
   crossplay: boolean;
+
+  @Column({ default: false })
+  singlePlayer: boolean;
+
+  @Column({ default: false })
+  localMultiplayer: boolean;
+
+  @Column('numeric', { nullable: true })
+  rating: number;
+
+  @Column('simple-array', { nullable: true })
+  language: string[];
+
+  @Column({ default: false })
+  dlcAvailable: boolean;
+
+  @Column({ default: false })
+  vrSupport: boolean;
+
+  @Column({ default: false })
+  achievements: boolean;
+
+  @Column({ default: false })
+  mods: boolean;
+
+  @Column({ nullable: true })
+  franchise: string;
 }
